@@ -1,0 +1,7 @@
+{
+  "parent": "slsb:custom/kasakavenomfang",
+  "textures": {
+    "0": "slsb:block/kasakavenomfangtexture",
+    "particle": "slsb:item/kasaka"
+  }
+}

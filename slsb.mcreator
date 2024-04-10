@@ -3,6 +3,7 @@
     {
       "name": "Awakening",
       "type": "achievement",
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "awakening",
@@ -22,7 +23,157 @@
       "registry_name": "awakening_timer",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/slsb/procedures/AwakeningTimerProcedure.java"
+          "src/main/java/net/clozynoii/slsb/procedures/AwakeningTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomClass",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_class",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomClassProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomRank",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_rank",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomRankProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "SLSBAdmin",
+      "type": "command",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slsb_admin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/command/SLSBAdminCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "JoinWorld",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "join_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/JoinWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "WorldCreated",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_created",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/WorldCreatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "GateTimer",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gate_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GateTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomGateCommand",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_gate_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomGateCommandProcedure.java"
         ],
         "dependencies": [
           {
@@ -35,81 +186,90 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Procedures/Commands"
     },
     {
-      "name": "TestRightclicked",
-      "type": "procedure",
-      "sortid": 2,
+      "name": "KasakasVenomFang",
+      "type": "tool",
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "test_rightclicked",
+      "registry_name": "kasakas_venom_fang",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/slsb/procedures/TestRightclickedProcedure.java"
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AwakenCommand",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awaken_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AwakenCommandProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Procedures"
-    },
-    {
-      "name": "Test",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/slsb/item/TestItem.java",
-          "src/main/resources/assets/slsb/models/item/test.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "RandomClass",
-      "type": "procedure",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "random_class",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/slsb/procedures/RandomClassProcedure.java"
-        ],
-        "dependencies": [
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Procedures/Commands"
     },
     {
-      "name": "RandomRank",
+      "name": "RandomClassCommand",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "random_rank",
+      "registry_name": "random_class_command",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/slsb/procedures/RandomRankProcedure.java"
+          "src/main/java/net/clozynoii/slsb/procedures/RandomClassCommandProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "arguments",
+            "type": "cmdcontext"
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "RandomRankCommand",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_rank_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomRankCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
     }
   ],
   "variable_elements": [
@@ -129,21 +289,33 @@
       "name": "HunterClass",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
     },
     {
       "name": "Rank",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
+    },
+    {
+      "name": "WorldCreated",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "GateTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
       "advancements.awakening.descr": "Awaken as a Hunter.",
-      "advancements.awakening.title": "Awakening",
-      "item.slsb.test": "Test"
+      "advancements.awakening.title": "Awakening"
     }
   },
   "foldersRoot": {
@@ -151,7 +323,16 @@
     "children": [
       {
         "name": "Procedures",
-        "children": []
+        "children": [
+          {
+            "name": "Player",
+            "children": []
+          },
+          {
+            "name": "Commands",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Mobs",
@@ -159,12 +340,7 @@
       },
       {
         "name": "Items",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Weapons",
@@ -236,17 +412,22 @@
     "modid": "slsb",
     "modName": "Solo Leveling System Break",
     "version": "1.0.0",
-    "author": "jayso, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "author": "sushiclozy, NoiiLive",
+    "websiteURL": "Clozy: https://discord.gg/2ZVbpGkGKG // Noii: https://discord.gg/VyKWxMyeZf",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "slsb_logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator"
+    ],
     "currentGenerator": "forge-1.20.1",
-    "modElementsPackage": "net.mcreator.slsb",
+    "credits": "Clozy, Noii, Chugong",
+    "modElementsPackage": "net.clozynoii.slsb",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202300452316

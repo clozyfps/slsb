@@ -1,0 +1,36 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "kasaka",
+    "customModelName": "kasakavenomfang:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Kasakas Venom Fang",
+    "specialInformation": {
+      "fixedValue": [
+        "§f-Effect \"§eParalyze§f\": The Opponent Will Be Paralyzed At A Certain Rate.",
+        "§f-Effect \"§eBleed§f\": The Opponent Will Lose 1% Health Every Second."
+      ]
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 0,
+    "damageVsEntity": 23.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

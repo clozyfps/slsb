@@ -1,14 +1,15 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="Academic Free License v3.0"
+license="All Rights Reserved"
 
 [[mods]]
 modId="slsb"
 version="1.0.0"
 displayName="Solo Leveling System Break"
-displayURL="https://mcreator.net"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="jayso, MCreator"
+displayURL="Clozy: https://discord.gg/2ZVbpGkGKG // Noii: https://discord.gg/VyKWxMyeZf"
+logoFile="logo.png"
+credits="Clozy, Noii, Chugong"
+authors="sushiclozy, NoiiLive"
 
 [[dependencies.slsb]]
     modId="minecraft"
@@ -19,4 +20,16 @@ authors="jayso, MCreator"
 
 
 
+[[dependencies.slsb]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.slsb]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

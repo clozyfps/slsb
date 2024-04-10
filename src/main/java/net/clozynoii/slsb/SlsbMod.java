@@ -11,7 +11,7 @@
  *    will be REGENERATED on each build.
  *
  */
-package net.mcreator.slsb;
+package net.clozynoii.slsb;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -28,6 +28,9 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
+
+import net.clozynoii.slsb.init.SlsbModTabs;
+import net.clozynoii.slsb.init.SlsbModItems;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -46,6 +49,10 @@ public class SlsbMod {
 	public SlsbMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		SlsbModItems.REGISTRY.register(bus);
+
+		SlsbModTabs.REGISTRY.register(bus);
 
 	}
 
