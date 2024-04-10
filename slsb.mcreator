@@ -142,7 +142,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Gates"
     },
     {
       "name": "GateTimer",
@@ -162,7 +162,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Gates"
     },
     {
       "name": "RandomGateCommand",
@@ -270,6 +270,135 @@
         ]
       },
       "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "BlueGateSmall",
+      "type": "animatedblock",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_gate_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
+          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/BlueGateSmallTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
+          "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json",
+          "src/main/resources/assets/slsb/blockstates/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/BlueGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks/Gates"
+    },
+    {
+      "name": "GateUpdateTick",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gate_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GateUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "RedGateSmall",
+      "type": "animatedblock",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_gate_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java",
+          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
+          "src/main/resources/assets/slsb/blockstates/red_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/RedGateSmallDisplayItem.java",
+          "src/main/resources/assets/slsb/models/item/red_gate_small.json"
+        ]
+      },
+      "path": "~/Blocks/Gates"
+    },
+    {
+      "name": "Test",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/TestItem.java",
+          "src/main/resources/assets/slsb/models/item/test.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TestGateRightClick",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_gate_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TestGateRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -315,7 +444,10 @@
     "en_us": {
       "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
       "advancements.awakening.descr": "Awaken as a Hunter.",
-      "advancements.awakening.title": "Awakening"
+      "block.slsb.blue_gate_small": "Blue Gate Small",
+      "block.slsb.red_gate_small": "Red Gate Small",
+      "advancements.awakening.title": "Awakening",
+      "item.slsb.test": "Force Dungeon Break"
     }
   },
   "foldersRoot": {
@@ -330,6 +462,10 @@
           },
           {
             "name": "Commands",
+            "children": []
+          },
+          {
+            "name": "Gates",
             "children": []
           }
         ]
@@ -392,7 +528,12 @@
       },
       {
         "name": "Blocks",
-        "children": []
+        "children": [
+          {
+            "name": "Gates",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Biomes",

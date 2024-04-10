@@ -31,6 +31,8 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.clozynoii.slsb.init.SlsbModTabs;
 import net.clozynoii.slsb.init.SlsbModItems;
+import net.clozynoii.slsb.init.SlsbModBlocks;
+import net.clozynoii.slsb.init.SlsbModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -50,6 +52,8 @@ public class SlsbMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		SlsbModBlocks.REGISTRY.register(bus);
+		SlsbModBlockEntities.REGISTRY.register(bus);
 		SlsbModItems.REGISTRY.register(bus);
 
 		SlsbModTabs.REGISTRY.register(bus);

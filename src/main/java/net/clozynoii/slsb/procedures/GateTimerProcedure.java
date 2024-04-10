@@ -5,8 +5,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -14,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.init.SlsbModBlocks;
 
 import javax.annotation.Nullable;
 
@@ -58,21 +62,81 @@ public class GateTimerProcedure {
 				GateRandomize = Mth.nextInt(RandomSource.create(), 1, 20);
 				if (GateRandomize >= 1 && GateRandomize < 5) {
 					GateRank = "\u00A7f\u00A7lE-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "E-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (GateRandomize >= 5 && GateRandomize < 10) {
 					GateRank = "\u00A7a\u00A7lD-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "D-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (GateRandomize >= 10 && GateRandomize < 15) {
 					GateRank = "\u00A7d\u00A7lC-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "C-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (GateRandomize >= 15 && GateRandomize < 18) {
 					GateRank = "\u00A7b\u00A7lB-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "B-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (GateRandomize >= 18 && GateRandomize < 20) {
 					GateRank = "\u00A7e\u00A7lA-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "A-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (GateRandomize == 20) {
 					GateRank = "\u00A7c\u00A7lS-Rank";
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("GateRank", "S-Rank");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7f\u00A7lA " + GateRank + " \u00A7f\u00A7lGate Has Opened At: \u00A7f" + new java.text.DecimalFormat("##").format(RandomX) + " "

@@ -1,5 +1,8 @@
 {
   "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
   "advancements.awakening.descr": "Awaken as a Hunter.",
-  "advancements.awakening.title": "Awakening"
+  "block.slsb.blue_gate_small": "Blue Gate Small",
+  "block.slsb.red_gate_small": "Red Gate Small",
+  "advancements.awakening.title": "Awakening",
+  "item.slsb.test": "Force Dungeon Break"
 }

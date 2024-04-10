@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "slsb:custom/blue_gate_small_particle"
+    },
+    "facing=east": {
+      "model": "slsb:custom/blue_gate_small_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "slsb:custom/blue_gate_small_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "slsb:custom/blue_gate_small_particle",
+      "y": 270
+    }
+  }
+}
