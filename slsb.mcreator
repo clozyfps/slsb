@@ -1,24 +1,236 @@
 {
   "mod_elements": [
     {
-      "name": "Test",
+      "name": "Awakening",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awakening",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/awakening.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AwakeningTimer",
       "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awakening_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/slsb/procedures/AwakeningTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TestRightclicked",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/slsb/procedures/TestRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "Test",
+      "type": "item",
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
       "metadata": {
-        "dependencies": []
-      }
+        "files": [
+          "src/main/java/net/mcreator/slsb/item/TestItem.java",
+          "src/main/resources/assets/slsb/models/item/test.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "RandomClass",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_class",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/slsb/procedures/RandomClassProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RandomRank",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_rank",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/slsb/procedures/RandomRankProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "PlayerTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HunterClass",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "advancements.awakening.descr": "Awaken as a Hunter.",
+      "advancements.awakening.title": "Awakening",
+      "item.slsb.test": "Test"
+    }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Armors",
+        "children": []
+      },
+      {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Potions",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Damage Sources",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "slsb",
