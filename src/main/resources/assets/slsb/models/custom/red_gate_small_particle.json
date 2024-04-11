@@ -1,0 +1,6 @@
+{
+  "parent": "slsb:displaysettings/bluegatesmall.item",
+  "textures": {
+    "particle": "slsb:block/smallredgatetexture"
+  }
+}
