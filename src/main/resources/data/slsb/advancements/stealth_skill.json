@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": {
+      "translate": "advancements.stealth_skill.title"
+    },
+    "description": {
+      "translate": "advancements.stealth_skill.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stealth_skill": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:assassin_class"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": {
+      "translate": "advancements.strength_skill.title"
+    },
+    "description": {
+      "translate": "advancements.strength_skill.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "strength_skill": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:haste_skill"
+}

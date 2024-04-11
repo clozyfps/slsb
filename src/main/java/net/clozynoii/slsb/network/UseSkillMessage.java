@@ -1,11 +1,22 @@
 
 package net.clozynoii.slsb.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import net.clozynoii.slsb.procedures.UseSkillOnKeyPressedProcedure;
 import net.clozynoii.slsb.SlsbMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class UseSkillMessage {
-
 	int type, pressedms;
 
 	public UseSkillMessage(int type, int pressedms) {
@@ -36,21 +47,17 @@ public class UseSkillMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
-			UseSkillOnKeyPressedProcedure.execute();
+			UseSkillOnKeyPressedProcedure.execute(entity);
 		}
-
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		SlsbMod.addNetworkMessage(UseSkillMessage.class, UseSkillMessage::buffer, UseSkillMessage::new, UseSkillMessage::handler);
 	}
-
 }

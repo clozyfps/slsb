@@ -1,5 +1,23 @@
 {
+  "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
   "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
   "advancements.awakening.descr": "Awaken as a Hunter.",
-  "advancements.awakening.title": "Awakening"
+  "advancements.assassin_class.descr": "Become the Assassin Class.",
+  "advancements.healer_class.title": "Healer",
+  "entity.slsb.after_image": "After Image",
+  "advancements.strength_skill.title": "Strength Skill",
+  "advancements.healer_class.descr": "Become the Healer Class.",
+  "advancements.heal_skill.descr": "Unlock Heal Skill",
+  "advancements.assassin_class.title": "Assassin",
+  "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
+  "advancements.stealth_skill.title": "Stealth Skill",
+  "advancements.haste_skill.title": "Haste Skill",
+  "key.slsb.use_skill": "Use Skill",
+  "advancements.heal_skill.title": "Heal Skill",
+  "block.slsb.blue_gate_small": "Blue Gate Small",
+  "block.slsb.red_gate_small": "Red Gate Small",
+  "advancements.stealth_skill.descr": "Unlock Stealth Skill",
+  "advancements.awakening.title": "Awakening",
+  "key.slsb.switch_skill": "Switch Skill",
+  "item.slsb.test": "Force Dungeon Break"
 }

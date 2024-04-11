@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:knowledge_book"
+    },
+    "title": {
+      "translate": "advancements.healer_class.title"
+    },
+    "description": {
+      "translate": "advancements.healer_class.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "healer_class": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:awakening"
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": {
+      "translate": "advancements.haste_skill.title"
+    },
+    "description": {
+      "translate": "advancements.haste_skill.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "haste_skill": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:heal_skill"
+}

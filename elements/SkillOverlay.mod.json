@@ -20,6 +20,40 @@
           "x": 23,
           "y": 211
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_mana_overlay",
+          "text": {
+            "fixedValue": "",
+            "name": "ManaOverlay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 23,
+          "y": 197
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cost_overlay",
+          "text": {
+            "fixedValue": "",
+            "name": "CostOverlay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 23,
+          "y": 225
+        }
       }
     ],
     "baseTexture": "",

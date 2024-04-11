@@ -94,6 +94,9 @@ public class SlsbModVariables {
 			clone.Aura = original.Aura;
 			clone.ManaMax = original.ManaMax;
 			clone.MoveSelected = original.MoveSelected;
+			clone.SkillCooldown = original.SkillCooldown;
+			clone.HealActive = original.HealActive;
+			clone.Mastery = original.Mastery;
 			if (!event.isWasDeath()) {
 				clone.StealthActive = original.StealthActive;
 			}
@@ -287,8 +290,11 @@ public class SlsbModVariables {
 		public String CurrentMove = "";
 		public ItemStack HelmetSave = ItemStack.EMPTY;
 		public String Aura = "";
-		public double ManaMax = 0;
+		public double ManaMax = 150.0;
 		public String MoveSelected = "";
+		public double SkillCooldown = 0;
+		public boolean HealActive = false;
+		public double Mastery = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -319,6 +325,9 @@ public class SlsbModVariables {
 			nbt.putString("Aura", Aura);
 			nbt.putDouble("ManaMax", ManaMax);
 			nbt.putString("MoveSelected", MoveSelected);
+			nbt.putDouble("SkillCooldown", SkillCooldown);
+			nbt.putBoolean("HealActive", HealActive);
+			nbt.putDouble("Mastery", Mastery);
 			return nbt;
 		}
 
@@ -346,6 +355,9 @@ public class SlsbModVariables {
 			Aura = nbt.getString("Aura");
 			ManaMax = nbt.getDouble("ManaMax");
 			MoveSelected = nbt.getString("MoveSelected");
+			SkillCooldown = nbt.getDouble("SkillCooldown");
+			HealActive = nbt.getBoolean("HealActive");
+			Mastery = nbt.getDouble("Mastery");
 		}
 	}
 
@@ -392,6 +404,9 @@ public class SlsbModVariables {
 					variables.Aura = message.data.Aura;
 					variables.ManaMax = message.data.ManaMax;
 					variables.MoveSelected = message.data.MoveSelected;
+					variables.SkillCooldown = message.data.SkillCooldown;
+					variables.HealActive = message.data.HealActive;
+					variables.Mastery = message.data.Mastery;
 				}
 			});
 			context.setPacketHandled(true);

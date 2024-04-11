@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "slsb:kasakas_venom_fang"
+    },
+    "title": {
+      "translate": "advancements.assassin_class.title"
+    },
+    "description": {
+      "translate": "advancements.assassin_class.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "assassin_class": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:awakening"
+}

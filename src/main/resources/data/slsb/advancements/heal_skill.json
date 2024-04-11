@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": {
+      "translate": "advancements.heal_skill.title"
+    },
+    "description": {
+      "translate": "advancements.heal_skill.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "heal_skill": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "slsb:healer_class"
+}

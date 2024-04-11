@@ -22,6 +22,13 @@ public class RandomClassProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				String _setval = "\u00A7b";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("You Are A " + "\u00A7b\u00A7lMage")), true);
 		}
@@ -30,6 +37,13 @@ public class RandomClassProcedure {
 				String _setval = "Assassin";
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.HunterClass = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "\u00A79";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -44,6 +58,13 @@ public class RandomClassProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				String _setval = "\u00A72";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("You Are A " + "\u00A72\u00A7lRanger")), true);
 		}
@@ -52,6 +73,13 @@ public class RandomClassProcedure {
 				String _setval = "Healer";
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.HunterClass = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "\u00A7a";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -66,6 +94,13 @@ public class RandomClassProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				String _setval = "\u00A76";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("You Are A " + "\u00A76\u00A7lFighter")), true);
 		}
@@ -74,6 +109,13 @@ public class RandomClassProcedure {
 				String _setval = "Tanker";
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.HunterClass = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "\u00A7c";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

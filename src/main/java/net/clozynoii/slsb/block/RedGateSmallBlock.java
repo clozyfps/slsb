@@ -1,11 +1,54 @@
 
 package net.clozynoii.slsb.block;
 
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-import net.minecraft.world.level.material.Material;
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
+
+import net.clozynoii.slsb.procedures.GateUpdateTickProcedure;
+import net.clozynoii.slsb.init.SlsbModBlockEntities;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
+import java.util.Collections;
 
 public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 	public static final IntegerProperty ANIMATION = IntegerProperty.create("animation", 0, (int) 1);
@@ -14,7 +57,6 @@ public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 	public RedGateSmallBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(-1, 3600000).lightLevel(s -> 14).noCollission().noOcclusion().pushReaction(PushReaction.IGNORE).hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
-
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -75,7 +117,6 @@ public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -96,7 +137,6 @@ public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 		int z = pos.getZ();
 
 		GateUpdateTickProcedure.execute(world, x, y, z);
-
 		world.scheduleTick(pos, this, 1);
 	}
 
@@ -131,5 +171,4 @@ public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
 	}
-
 }
