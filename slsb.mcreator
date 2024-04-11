@@ -197,8 +197,8 @@
       "registry_name": "kasakas_venom_fang",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
-          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json",
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -270,6 +270,266 @@
         ]
       },
       "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "StealthActive",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stealth_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StealthActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills"
+    },
+    {
+      "name": "AfterImageBlueDisplayCondition",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_blue_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AfterImageBlueDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "AfterImagePurpleDisplayCondition",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_purple_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AfterImagePurpleDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "AfterImage",
+      "type": "livingentity",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/entity/AfterImageEntity.java",
+          "src/main/java/net/clozynoii/slsb/client/renderer/AfterImageRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Misc"
+    },
+    {
+      "name": "SwitchSkill",
+      "type": "keybind",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/network/SwitchSkillMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseSkill",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/network/UseSkillMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SwitchSkillOnKeyPressed",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_skill_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SwitchSkillOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "SkillDisplay",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "SkillOverlay",
+      "type": "overlay",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/client/screens/SkillOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
+    },
+    {
+      "name": "SkillDisplayTick",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_display_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "SetMove",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetMoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "CooldownTimer",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CooldownTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "UseSkillOnKeyPressed",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_skill_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/UseSkillOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
     }
   ],
   "variable_elements": [
@@ -308,6 +568,114 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "StealthActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "HelmetSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "ChestplateSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "LeggingsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "BootsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Aura",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "MoveSelected",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Move1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Move2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Move3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Move4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "MoveOn",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ManaMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CurrentMove",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Cooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ColorCode",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -315,7 +683,10 @@
     "en_us": {
       "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
       "advancements.awakening.descr": "Awaken as a Hunter.",
-      "advancements.awakening.title": "Awakening"
+      "key.slsb.use_skill": "Use Skill",
+      "entity.slsb.after_image": "After Image",
+      "advancements.awakening.title": "Awakening",
+      "key.slsb.switch_skill": "Switch Skill"
     }
   },
   "foldersRoot": {
@@ -331,12 +702,26 @@
           {
             "name": "Commands",
             "children": []
+          },
+          {
+            "name": "Skills",
+            "children": []
           }
         ]
       },
       {
         "name": "Mobs",
-        "children": []
+        "children": [
+          {
+            "name": "Misc",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Items",
@@ -356,11 +741,21 @@
       },
       {
         "name": "Keybinds",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Overlays",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "GUI",
@@ -368,7 +763,12 @@
       },
       {
         "name": "Commands",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Potions",

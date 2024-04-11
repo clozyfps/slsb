@@ -31,6 +31,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.clozynoii.slsb.init.SlsbModTabs;
 import net.clozynoii.slsb.init.SlsbModItems;
+import net.clozynoii.slsb.init.SlsbModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,6 +52,7 @@ public class SlsbMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		SlsbModItems.REGISTRY.register(bus);
+		SlsbModEntities.REGISTRY.register(bus);
 
 		SlsbModTabs.REGISTRY.register(bus);
 

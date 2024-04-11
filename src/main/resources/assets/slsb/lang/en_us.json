@@ -1,5 +1,8 @@
 {
   "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
   "advancements.awakening.descr": "Awaken as a Hunter.",
-  "advancements.awakening.title": "Awakening"
+  "key.slsb.use_skill": "Use Skill",
+  "entity.slsb.after_image": "After Image",
+  "advancements.awakening.title": "Awakening",
+  "key.slsb.switch_skill": "Switch Skill"
 }

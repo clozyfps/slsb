@@ -19,6 +19,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -33,7 +34,6 @@ import net.minecraft.client.Minecraft;
 import net.clozynoii.slsb.SlsbMod;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SlsbModVariables {
@@ -52,29 +52,20 @@ public class SlsbModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
@@ -86,12 +77,25 @@ public class SlsbModVariables {
 			clone.PlayerTimer = original.PlayerTimer;
 			clone.HunterClass = original.HunterClass;
 			clone.Rank = original.Rank;
+			clone.HelmetSave = original.HelmetSave;
+			clone.ChestplateSave = original.ChestplateSave;
+			clone.LeggingsSave = original.LeggingsSave;
+			clone.BootsSave = original.BootsSave;
+			clone.Aura = original.Aura;
+			clone.MoveSelected = original.MoveSelected;
+			clone.Move1 = original.Move1;
+			clone.Move2 = original.Move2;
+			clone.Move3 = original.Move3;
+			clone.Move4 = original.Move4;
+			clone.MoveOn = original.MoveOn;
+			clone.Mana = original.Mana;
+			clone.ManaMax = original.ManaMax;
+			clone.CurrentMove = original.CurrentMove;
+			clone.Cooldown = original.Cooldown;
+			clone.Cost = original.Cost;
+			clone.ColorCode = original.ColorCode;
 			if (!event.isWasDeath()) {
-			}
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
+				clone.StealthActive = original.StealthActive;
 			}
 		}
 
@@ -267,10 +271,28 @@ public class SlsbModVariables {
 		public double PlayerTimer = 0;
 		public String HunterClass = "";
 		public String Rank = "";
+		public boolean StealthActive = false;
+		public ItemStack HelmetSave = ItemStack.EMPTY;
+		public ItemStack ChestplateSave = ItemStack.EMPTY;
+		public ItemStack LeggingsSave = ItemStack.EMPTY;
+		public ItemStack BootsSave = ItemStack.EMPTY;
+		public String Aura = "";
+		public String MoveSelected = "";
+		public String Move1 = "";
+		public String Move2 = "";
+		public String Move3 = "";
+		public String Move4 = "";
+		public double MoveOn = 1.0;
+		public double Mana = 0;
+		public double ManaMax = 0;
+		public String CurrentMove = "";
+		public double Cooldown = 0;
+		public double Cost = 0;
+		public String ColorCode = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
-				SlsbMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
+				SlsbMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
 		}
 
 		public Tag writeNBT() {
@@ -279,6 +301,24 @@ public class SlsbModVariables {
 			nbt.putDouble("PlayerTimer", PlayerTimer);
 			nbt.putString("HunterClass", HunterClass);
 			nbt.putString("Rank", Rank);
+			nbt.putBoolean("StealthActive", StealthActive);
+			nbt.put("HelmetSave", HelmetSave.save(new CompoundTag()));
+			nbt.put("ChestplateSave", ChestplateSave.save(new CompoundTag()));
+			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
+			nbt.put("BootsSave", BootsSave.save(new CompoundTag()));
+			nbt.putString("Aura", Aura);
+			nbt.putString("MoveSelected", MoveSelected);
+			nbt.putString("Move1", Move1);
+			nbt.putString("Move2", Move2);
+			nbt.putString("Move3", Move3);
+			nbt.putString("Move4", Move4);
+			nbt.putDouble("MoveOn", MoveOn);
+			nbt.putDouble("Mana", Mana);
+			nbt.putDouble("ManaMax", ManaMax);
+			nbt.putString("CurrentMove", CurrentMove);
+			nbt.putDouble("Cooldown", Cooldown);
+			nbt.putDouble("Cost", Cost);
+			nbt.putString("ColorCode", ColorCode);
 			return nbt;
 		}
 
@@ -288,43 +328,70 @@ public class SlsbModVariables {
 			PlayerTimer = nbt.getDouble("PlayerTimer");
 			HunterClass = nbt.getString("HunterClass");
 			Rank = nbt.getString("Rank");
+			StealthActive = nbt.getBoolean("StealthActive");
+			HelmetSave = ItemStack.of(nbt.getCompound("HelmetSave"));
+			ChestplateSave = ItemStack.of(nbt.getCompound("ChestplateSave"));
+			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
+			BootsSave = ItemStack.of(nbt.getCompound("BootsSave"));
+			Aura = nbt.getString("Aura");
+			MoveSelected = nbt.getString("MoveSelected");
+			Move1 = nbt.getString("Move1");
+			Move2 = nbt.getString("Move2");
+			Move3 = nbt.getString("Move3");
+			Move4 = nbt.getString("Move4");
+			MoveOn = nbt.getDouble("MoveOn");
+			Mana = nbt.getDouble("Mana");
+			ManaMax = nbt.getDouble("ManaMax");
+			CurrentMove = nbt.getString("CurrentMove");
+			Cooldown = nbt.getDouble("Cooldown");
+			Cost = nbt.getDouble("Cost");
+			ColorCode = nbt.getString("ColorCode");
 		}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		SlsbMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
-	}
-
 	public static class PlayerVariablesSyncMessage {
-		private final int target;
 		private final PlayerVariables data;
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
 			this.data = new PlayerVariables();
 			this.data.readNBT(buffer.readNbt());
-			this.target = buffer.readInt();
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
+		public PlayerVariablesSyncMessage(PlayerVariables data) {
 			this.data = data;
-			this.target = entityid;
 		}
 
 		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
 			buffer.writeNbt((CompoundTag) message.data.writeNBT());
-			buffer.writeInt(message.target);
 		}
 
 		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 			NetworkEvent.Context context = contextSupplier.get();
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.JoinedWorld = message.data.JoinedWorld;
 					variables.PlayerTimer = message.data.PlayerTimer;
 					variables.HunterClass = message.data.HunterClass;
 					variables.Rank = message.data.Rank;
+					variables.StealthActive = message.data.StealthActive;
+					variables.HelmetSave = message.data.HelmetSave;
+					variables.ChestplateSave = message.data.ChestplateSave;
+					variables.LeggingsSave = message.data.LeggingsSave;
+					variables.BootsSave = message.data.BootsSave;
+					variables.Aura = message.data.Aura;
+					variables.MoveSelected = message.data.MoveSelected;
+					variables.Move1 = message.data.Move1;
+					variables.Move2 = message.data.Move2;
+					variables.Move3 = message.data.Move3;
+					variables.Move4 = message.data.Move4;
+					variables.MoveOn = message.data.MoveOn;
+					variables.Mana = message.data.Mana;
+					variables.ManaMax = message.data.ManaMax;
+					variables.CurrentMove = message.data.CurrentMove;
+					variables.Cooldown = message.data.Cooldown;
+					variables.Cost = message.data.Cost;
+					variables.ColorCode = message.data.ColorCode;
 				}
 			});
 			context.setPacketHandled(true);
