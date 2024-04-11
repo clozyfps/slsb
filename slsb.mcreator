@@ -142,7 +142,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Gates"
     },
     {
       "name": "GateTimer",
@@ -162,7 +162,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Gates"
     },
     {
       "name": "RandomGateCommand",
@@ -565,7 +565,7 @@
           "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json"
         ]
       },
-      "path": "~/Blocks/Gates"
+      "path": "~/Blocks"
     },
     {
       "name": "RedGateSmall",
@@ -588,7 +588,7 @@
           "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java"
         ]
       },
-      "path": "~/Blocks/Gates"
+      "path": "~/Blocks"
     },
     {
       "name": "Test",
@@ -791,7 +791,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
+      "item.slsb.kasakas_venom_fang": "Kasaka\u0027s Venom Fang",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "advancements.awakening.title": "Awakening"
     }
@@ -812,6 +812,10 @@
           },
           {
             "name": "Skills",
+            "children": []
+          },
+          {
+            "name": "Gates",
             "children": []
           }
         ]
