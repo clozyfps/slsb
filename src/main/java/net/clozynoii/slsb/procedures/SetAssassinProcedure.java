@@ -1,13 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.commands.CommandSourceStack;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.brigadier.context.CommandContext;
+import javax.annotation.Nullable;
 
 public class SetAssassinProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {

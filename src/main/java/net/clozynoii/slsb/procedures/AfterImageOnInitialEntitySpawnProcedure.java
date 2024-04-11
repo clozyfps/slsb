@@ -1,9 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.SlsbMod;
+import javax.annotation.Nullable;
 
 public class AfterImageOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

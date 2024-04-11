@@ -1,8 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
+import javax.annotation.Nullable;
 
 public class CostOverlayProcedure {
 	public static String execute(Entity entity) {

@@ -1,13 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.entity.Entity;
-
-import net.clozynoii.slsb.network.SlsbModVariables;
 
 import javax.annotation.Nullable;
 
@@ -29,13 +22,6 @@ public class SkillStatSetProcedure {
 			return;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MoveSelected).equals("Haste")) {
 			{
-				double _setval = 350;
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.SkillCooldown = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
 				double _setval = 100;
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Cost = _setval;
@@ -44,13 +30,6 @@ public class SkillStatSetProcedure {
 			}
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MoveSelected).equals("Strength")) {
-			{
-				double _setval = 350;
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.SkillCooldown = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			{
 				double _setval = 150;
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -61,13 +40,6 @@ public class SkillStatSetProcedure {
 		}
 		if (!(((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MoveSelected).equals("Strength")
 				|| ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MoveSelected).equals("Haste"))) {
-			{
-				double _setval = 0;
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.SkillCooldown = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			{
 				double _setval = 0;
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -197,8 +197,8 @@
       "registry_name": "kasakas_venom_fang",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json",
-          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java"
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
         ]
       },
       "path": "~/Weapons"
@@ -353,12 +353,7 @@
         "files": [
           "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayTickProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/Player"
     },
@@ -477,12 +472,7 @@
         "files": [
           "src/main/java/net/clozynoii/slsb/procedures/CooldownTimerProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures/Player"
     },
@@ -498,12 +488,7 @@
         "files": [
           "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Overlays/Procedures"
     },
@@ -556,8 +541,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Blocks"
+      }
     },
     {
       "name": "BlueGateSmall",
@@ -579,8 +563,7 @@
           "src/main/java/net/clozynoii/slsb/block/entity/BlueGateSmallTileEntity.java",
           "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json"
         ]
-      },
-      "path": "~/Blocks"
+      }
     },
     {
       "name": "RedGateSmall",
@@ -602,8 +585,7 @@
           "src/main/java/net/clozynoii/slsb/block/display/RedGateSmallDisplayItem.java",
           "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java"
         ]
-      },
-      "path": "~/Blocks"
+      }
     },
     {
       "name": "Test",
@@ -657,88 +639,6 @@
       "path": "~/Items"
     },
     {
-      "name": "SkillActive",
-      "type": "procedure",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_active",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/SkillActiveProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Player"
-    },
-    {
-      "name": "ManaRegen",
-      "type": "procedure",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_regen",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/ManaRegenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Player"
-    },
-    {
-      "name": "ManaOverlay",
-      "type": "procedure",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_overlay",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/ManaOverlayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
-      "name": "CostOverlay",
-      "type": "procedure",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cost_overlay",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/CostOverlayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
       "name": "StealthSkill",
       "type": "achievement",
       "sortid": 33,
@@ -751,68 +651,6 @@
         ]
       },
       "path": "~/Advancements/Skills/Assassin"
-    },
-    {
-      "name": "AssassinClass",
-      "type": "achievement",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "assassin_class",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/advancements/assassin_class.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "HealerClass",
-      "type": "achievement",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "healer_class",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/advancements/healer_class.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "HealSkill",
-      "type": "achievement",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "heal_skill",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/advancements/heal_skill.json"
-        ]
-      },
-      "path": "~/Advancements/Skills/Healer"
-    },
-    {
-      "name": "SkillStatSet",
-      "type": "procedure",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_stat_set",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/SkillStatSetProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Player"
     },
     {
       "name": "HealActive",
@@ -849,74 +687,6 @@
         ]
       },
       "path": "~/Procedures/Skills"
-    },
-    {
-      "name": "HasteSkill",
-      "type": "achievement",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "haste_skill",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/advancements/haste_skill.json"
-        ]
-      },
-      "path": "~/Advancements/Skills/Healer"
-    },
-    {
-      "name": "StrengthSkill",
-      "type": "achievement",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_skill",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/advancements/strength_skill.json"
-        ]
-      },
-      "path": "~/Advancements/Skills/Healer"
-    },
-    {
-      "name": "SetMana",
-      "type": "procedure",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_mana",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/SetManaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "StatTick",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stat_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/StatTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Player"
     },
     {
       "name": "SetAssassin",
@@ -959,6 +729,89 @@
       "path": "~/Commands/Procedures"
     },
     {
+      "name": "CostOverlay",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cost_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CostOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "HealSkill",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/heal_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
+      "name": "SkillActive",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "StrengthSkill",
+      "type": "achievement",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/strength_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
+      "name": "HasteSkill",
+      "type": "achievement",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/haste_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
       "name": "AfterImageOnInitialEntitySpawn",
       "type": "procedure",
       "sortid": 45,
@@ -981,6 +834,135 @@
         ]
       },
       "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "SetMana",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetManaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ManaOverlay",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "SkillStatSet",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_stat_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillStatSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "StatTick",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StatTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "HealerClass",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_class",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/healer_class.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ManaRegen",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "AssassinClass",
+      "type": "achievement",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_class",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/assassin_class.json"
+        ]
+      },
+      "path": "~/Advancements"
     }
   ],
   "variable_elements": [
@@ -1120,19 +1102,13 @@
       "name": "ManaMax",
       "type": "number",
       "scope": "player_persistent",
-      "value": "150.0"
+      "value": "0"
     },
     {
       "name": "MoveSelected",
       "type": "string",
       "scope": "player_persistent",
       "value": ""
-    },
-    {
-      "name": "SkillCooldown",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "HealActive",
@@ -1145,29 +1121,23 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "SkillCooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "item.slsb.kasakas_venom_fang": "Kasakas Venom Fang",
       "advancements.awakening.descr": "Awaken as a Hunter.",
-      "advancements.assassin_class.descr": "Become the Assassin Class.",
-      "advancements.healer_class.title": "Healer",
       "entity.slsb.after_image": "After Image",
-      "advancements.strength_skill.title": "Strength Skill",
-      "advancements.healer_class.descr": "Become the Healer Class.",
-      "advancements.heal_skill.descr": "Unlock Heal Skill",
-      "advancements.assassin_class.title": "Assassin",
-      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
-      "advancements.stealth_skill.title": "Stealth Skill",
-      "advancements.haste_skill.title": "Haste Skill",
       "key.slsb.use_skill": "Use Skill",
-      "advancements.heal_skill.title": "Heal Skill",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
-      "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "advancements.awakening.title": "Awakening",
       "key.slsb.switch_skill": "Switch Skill",
       "item.slsb.test": "Force Dungeon Break"
@@ -1177,114 +1147,29 @@
     "name": "~",
     "children": [
       {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": [
-          {
-            "name": "Player",
-            "children": []
-          },
           {
             "name": "Commands",
             "children": []
           },
           {
+            "name": "Player",
+            "children": []
+          },
+          {
             "name": "Skills",
             "children": []
-          }
-        ]
-      },
-      {
-        "name": "Mobs",
-        "children": [
+          },
           {
-            "name": "Misc",
-            "children": [
-              {
-                "name": "Procedures",
-                "children": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Items",
-        "children": []
-      },
-      {
-        "name": "Weapons",
-        "children": []
-      },
-      {
-        "name": "Armors",
-        "children": []
-      },
-      {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "Keybinds",
-        "children": [
-          {
-            "name": "Procedures",
+            "name": "Gates",
             "children": []
           }
         ]
-      },
-      {
-        "name": "Overlays",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "GUI",
-        "children": []
-      },
-      {
-        "name": "Commands",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Potions",
-        "children": []
-      },
-      {
-        "name": "Particles",
-        "children": []
-      },
-      {
-        "name": "Tags",
-        "children": []
-      },
-      {
-        "name": "Damage Sources",
-        "children": []
-      },
-      {
-        "name": "Recipes",
-        "children": []
-      },
-      {
-        "name": "Blocks",
-        "children": []
-      },
-      {
-        "name": "Biomes",
-        "children": []
-      },
-      {
-        "name": "Dimensions",
-        "children": []
       },
       {
         "name": "Advancements",
@@ -1301,6 +1186,95 @@
                 "children": []
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "Damage Sources",
+        "children": []
+      },
+      {
+        "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Armors",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Misc",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
           }
         ]
       }
